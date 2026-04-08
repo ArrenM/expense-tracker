@@ -1,15 +1,16 @@
-interface Expense {
+export interface Expense {
   id: String;
   title: String;
   amount: number;
   category: ExpenseCategory;
 }
 
-type ExpenseCategory =
+export type ExpenseCategory =
   | 'Work'
   | 'Personal'
   | 'Grocery'
   | 'Utilities'
   | 'Shopping'
   | 'Travel'
-  | 'Food';
+  | 'Food'
+  | 'None';
