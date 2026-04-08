@@ -4,7 +4,7 @@
     <div class="card" style="width: 50%">
       <div class="card-body">
         <h5 class="card-title">Total Expenses</h5>
-        <p class="card-text">{{ expenseService.totalExpense() }}</p>
+        <p class="card-text">${{ expenseService.totalExpense().toFixed(2) }}</p>
       </div>
     </div>
     <div class="card" style="width: 50%">
@@ -16,13 +16,13 @@
     <div class="card" style="width: 50%">
       <div class="card-body">
         <h5 class="card-title">Highest Expense</h5>
-        <p class="card-text">{{ expenseService.highestExpense() }}</p>
+        <p class="card-text">${{ expenseService.highestExpense().toFixed(2) }}</p>
       </div>
     </div>
     <div class="card" style="width: 50%">
       <div class="card-body">
         <h5 class="card-title">Average Expense per Transaction</h5>
-        <p class="card-text">{{ expenseService.averageExpense() }}</p>
+        <p class="card-text">${{ expenseService.averageExpense().toFixed(2) }}</p>
       </div>
     </div>
   </div>

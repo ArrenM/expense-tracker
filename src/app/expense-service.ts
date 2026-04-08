@@ -5,10 +5,7 @@ import { Expense } from '../model/expense';
   providedIn: 'root',
 })
 export class ExpenseService {
-  expenses = signal<Expense[]>([
-    { id: '1', title: 'One', amount: 1, category: 'Work' },
-    { id: '2', title: 'Two', amount: 2, category: 'Food' },
-  ]);
+  expenses = signal<Expense[]>([]);
 
   categories = signal<String[]>([
     'Work',
@@ -39,7 +36,11 @@ export class ExpenseService {
   });
 
   averageExpense = computed(() => {
-    return this.totalExpense() / this.transactionCount();
+    if (this.transactionCount() != 0) {
+      return this.totalExpense() / this.transactionCount();
+    } else {
+      return 0;
+    }
   });
 
   transactionCount = computed(() => {
