@@ -42,4 +42,16 @@
       </div>
     </div>
   </div>
+  <div
+    class="text-center"
+    [class.text-success]="success"
+    [class.text-danger]="!success"
+    id="message"
+  >
+    @if (success) {
+      Expense added!
+    } @else {
+      Title and Category must be set.
+    }
+  </div>
 </div>

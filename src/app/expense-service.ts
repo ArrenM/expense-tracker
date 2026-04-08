@@ -17,6 +17,8 @@ export class ExpenseService {
     'Food',
   ]);
 
+  nextId = signal<number>(0);
+
   totalExpense = computed(() => {
     let total = 0;
     for (let expense of this.expenses()) {
@@ -49,6 +51,7 @@ export class ExpenseService {
 
   addExpense(expense: Expense) {
     this.expenses.update((value) => [...value, expense]);
+    this.nextId.update((value) => value + 1);
   }
 
   deleteExpense(id: String) {
