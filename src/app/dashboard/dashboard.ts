@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { ExpenseService } from '../expense-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

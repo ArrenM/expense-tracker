@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ExpenseService } from '../expense-service';
 
 @Component({
   selector: 'app-add-expense',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './add-expense.css',
 })
 export class AddExpense {
-
+  expenseService = inject(ExpenseService);
 }
