@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ExpenseService } from '../expense-service';
+import { ExpenseService } from '../../service/expense-service';
 import { FormsModule } from '@angular/forms';
 import { Expense, ExpenseCategory } from '../../model/expense';
 import { sampleTime, timeInterval, timestamp } from 'rxjs';

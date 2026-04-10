@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ExpenseService } from '../expense-service';
+import { ExpenseService } from '../../service/expense-service';
 import { RouterLink } from '@angular/router';
 
 @Component({
