@@ -5,11 +5,7 @@ import { Expense } from '../model/expense';
   providedIn: 'root',
 })
 export class ExpenseService {
-  expenses = signal<Expense[]>([
-    { title: 'placeholder 1', id: '-1', amount: 1, category: 'Food' },
-    { title: 'placeholder 2', id: '-2', amount: 10, category: 'Grocery' },
-    { title: 'placeholder 3', id: '-3', amount: 100, category: 'Personal' },
-  ]);
+  expenses = signal<Expense[]>([]);
 
   categories = signal<String[]>([
     'Work',
